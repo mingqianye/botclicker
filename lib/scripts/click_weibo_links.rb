@@ -1,0 +1,1 @@
+ClickWeiboLinksService.new.start
