@@ -1,7 +1,5 @@
 class LandingController < ApplicationController
   def index
-    @proxy = ObtainProxyService.get
-    @links = ObtainTargetWeiboLinksService.get
-    ClickWeiboLinksService.run(@proxy)
+    byebug
   end
 end

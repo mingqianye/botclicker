@@ -6,8 +6,8 @@ class ClickWeiboLinksService
     puts "======= Starting at #{DateTime.now} ========="
       browser = ObtainBrowserService.get
       begin
-        browser.goto(Settings.ip_info_url)
-        puts "Ip info: #{JSON.parse(browser.body.text)}"
+        browser.goto('https://passport.weibo.cn/signin/login?entry=mweibo')
+        byebug
       rescue Exception => e
         puts "Oops, something is wrong!"
         puts e.backtrace
