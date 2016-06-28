@@ -1,3 +1,4 @@
-gimmeproxy_url: "http://gimmeproxy.com/api/getProxy?anonymityLevel=1&country=CN&user-agent=true&supportsHttps=true&timeout=60&maxCheckPeriod=10000&protocol=http"
+#gimmeproxy_url: "http://gimmeproxy.com/api/getProxy?anonymityLevel=1&country=CN&user-agent=true&supportsHttps=true&timeout=60&maxCheckPeriod=10000&protocol=http"
+gimmeproxy_url: "http://gimmeproxy.com/api/getProxy?anonymityLevel=1&user-agent=true&supportsHttps=true&timeout=60&maxCheckPeriod=10000&protocol=http"
 g_spreadsheet_url: "https://docs.google.com/spreadsheets/d/1hAWBxpWmIBvP23GOBiVjgpmWXM3Q_6ShBAayllBUjZk/pub?output=tsv"
 ip_info_url: "http://ip-api.com/json"
