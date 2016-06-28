@@ -15,7 +15,7 @@ class ClickWeiboLinksService
     browser = ObtainBrowserService.get
     begin
       #browser.goto('https://passport.weibo.cn/signin/login?entry=mweibo')
-      browser.goto('http://requestb.in/ynsnszyn')
+      browser.goto('http://requestb.in/zzoskgzz')
       browser.screenshot.save 'screenshot.png'
       puts 'done'
 
