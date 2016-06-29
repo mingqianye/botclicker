@@ -17,10 +17,7 @@ class ClickWeiboLinksService
       puts "Visiting #{link}"
       browser.goto(link)
       puts browser.html
-      sleep 20
-      puts "---------------------------------------------------"
-      puts browser.html
-      browser.screenshot.save 'screenshot.png'
+      browser.screenshot.save "screenshots/#{DateTime.now}.png"
       puts 'done'
     end
     browser.close
