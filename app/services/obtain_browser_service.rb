@@ -19,8 +19,8 @@ class ObtainBrowserService
     end
 
     def try_get_browser
-      proxy = ObtainProxyService.get
-      #proxy = ProxyConfig.new(Settings.tor_proxy)
+      #proxy = ObtainProxyService.get
+      proxy = ProxyConfig.new(Settings.tor_proxy)
       puts "Using proxy: #{proxy.ip_port}"
       capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs(PhantomjsConfigService.get(proxy))
       driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
