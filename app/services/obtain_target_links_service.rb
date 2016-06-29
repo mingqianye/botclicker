@@ -1,4 +1,4 @@
-class ObtainTargetWeiboLinksService
+class ObtainTargetLinksService
   def self.get
     response = HTTParty.get(Settings.g_spreadsheet_url)
     lines = response.body.split("\n").map(&:strip)

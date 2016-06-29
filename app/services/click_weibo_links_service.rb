@@ -13,17 +13,16 @@ class ClickWeiboLinksService
   private
   def run
     browser = ObtainBrowserService.get
-    begin
-      #browser.goto('https://passport.weibo.cn/signin/login?entry=mweibo')
-      browser.goto('http://requestb.in/zzoskgzz')
+    ObtainTargetLinksService.get.each do |link|
+      puts "Visiting #{link}"
+      browser.goto(link)
+      puts browser.html
+      sleep 20
+      puts "---------------------------------------------------"
+      puts browser.html
       browser.screenshot.save 'screenshot.png'
       puts 'done'
-
-    rescue Exception => e
-      puts "Oops, something is wrong!"
-      puts e.backtrace
-    ensure
-      browser.close
     end
+    browser.close
   end
 end

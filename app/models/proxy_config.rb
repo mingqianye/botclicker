@@ -1,6 +1,6 @@
 class ProxyConfig
-  attr_accessor :ip, :port
-  def ip_port
-    "#{@ip}:#{@port}"
+  attr_accessor :ip_port
+  def initialize(ip_port)
+    @ip_port = ip_port
   end
 end
