@@ -5,3 +5,4 @@ g_spreadsheet_url: "https://docs.google.com/spreadsheets/d/1hAWBxpWmIBvP23GOBiVj
 ip_info_url: "http://ip-api.com/json"
 referer_url: "http://weibo.com/u/2957260672?topnav=1&wvr=6&topsug=1&is_all=1"
 tor_proxy: "104.131.169.20:5566"
+pi_proxy: "192.168.1.10:8000"

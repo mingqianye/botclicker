@@ -4,9 +4,7 @@ class ClickWeiboLinksService
 
   def start
     puts "======= Starting at #{DateTime.now} ========="
-    with_retries(max_tries: 3) do
-      run
-    end
+    run
     puts "======= Exiting at #{DateTime.now} ========="
   end
 
@@ -16,7 +14,7 @@ class ClickWeiboLinksService
     ObtainTargetLinksService.get.each do |link|
       puts "Visiting #{link}"
       browser.goto(link)
-      puts browser.html
+      puts "Page title: #{browser.title}"
       browser.screenshot.save "screenshots/#{DateTime.now}.png"
       puts 'done'
     end
