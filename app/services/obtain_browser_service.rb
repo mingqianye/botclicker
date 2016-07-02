@@ -3,8 +3,7 @@ class ObtainBrowserService
     def get
       puts 'Trying to get a browser...'
       browser = try_get_browser
-      browser.goto(Settings.ip_info_url)
-      puts "Ip info: #{JSON.parse(browser.body.text)}"
+      WaitForNewIpService.wait(browser)
       browser
     end
 
