@@ -13,10 +13,6 @@ class ObtainBrowserService
   end
 
   private
-
-  def wait_for_new_ip
-  end
-
   def phantomjs_browser
     capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs(PhantomjsConfigService.get(@proxy))
     driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
