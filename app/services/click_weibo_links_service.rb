@@ -10,7 +10,7 @@ class ClickWeiboLinksService
 
   private
   def run
-    browser = ObtainBrowserService.get
+    browser = ObtainBrowserService.new.try_get_browser
     ObtainTargetLinksService.get.each do |link|
       puts "Visiting #{link}"
       browser.goto(link)
