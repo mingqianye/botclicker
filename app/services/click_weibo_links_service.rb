@@ -11,7 +11,7 @@ class ClickWeiboLinksService
   private
   def run
     browser = ObtainBrowserService.new.try_get_browser
-    ObtainTargetLinksService.get.each do |link|
+    ObtainTargetLinksService.get.shuffle.each do |link|
       puts "Visiting #{link}"
       browser.goto(link)
       Watir::Wait.until(240) { browser.title.present? }
